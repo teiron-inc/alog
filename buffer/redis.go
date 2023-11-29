@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/zwj186/alog/log"
+	"github.com/teiron-inc/alog/log"
 	"gopkg.in/redis.v3"
 )
 

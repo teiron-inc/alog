@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/zwj186/alog"
+	"github.com/teiron-inc/alog"
 )
 
 func main() {

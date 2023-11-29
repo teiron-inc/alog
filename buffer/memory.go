@@ -4,7 +4,7 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/zwj186/alog/log"
+	"github.com/teiron-inc/alog/log"
 )
 
 // NewMemoryBuffer 创建新的Memory实例

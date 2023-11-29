@@ -3,7 +3,7 @@ package manage
 import (
 	"testing"
 
-	"github.com/zwj186/alog/log"
+	"github.com/teiron-inc/alog/log"
 )
 
 func TestConsole(t *testing.T) {

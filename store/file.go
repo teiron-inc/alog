@@ -8,7 +8,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/zwj186/alog/log"
+	"github.com/teiron-inc/alog/log"
 )
 
 type _FileConfig struct {

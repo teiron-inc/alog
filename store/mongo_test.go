@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/zwj186/alog/log"
+	"github.com/teiron-inc/alog/log"
 )
 
 func TestMongoStore(t *testing.T) {

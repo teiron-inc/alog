@@ -3,8 +3,9 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/zwj186/alog"
 	"time"
+
+	"github.com/teiron-inc/alog"
 )
 
 const (

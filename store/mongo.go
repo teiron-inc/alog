@@ -3,7 +3,7 @@ package store
 import (
 	"text/template"
 
-	"github.com/zwj186/alog/log"
+	"github.com/teiron-inc/alog/log"
 	"gopkg.in/mgo.v2"
 )
 

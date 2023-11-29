@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/zwj186/alog/utils"
+	"github.com/teiron-inc/alog/utils"
 )
 
 // GetDateData 获取日期数据

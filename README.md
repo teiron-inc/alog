@@ -253,6 +253,13 @@ import (
 	"github.com/teiron-inc/alog"
 )
 
+func init() {
+	go sysSignalHandle()
+	alog.RegisterAlog("config.yaml")
+	alog.SetLogTag(filepath.Base(os.Args[0])) // 默认使用程序名称标签
+	alog.SetEnabled(true)
+}
+
 func sysSignalHandle() {
 	sigChan := make(chan os.Signal)
 	signal.Notify(sigChan, syscall.SIGHUP, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGILL, syscall.SIGABRT, syscall.SIGKILL,
@@ -265,9 +272,6 @@ func sysSignalHandle() {
 }
 
 func main() {
-	go sysSignalHandle()
-	alog.RegisterAlog("config.yaml")
-	alog.SetLogTag("Sample")
 	alog.Debug("Debug info...")
 	alog.DebugC("Debug console info...")
 	alog.Info("Info info...")

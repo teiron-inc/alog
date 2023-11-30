@@ -133,6 +133,8 @@ type StoreConfig struct {
 	Elastic map[string]ElasticConfig `json:"elastic" yaml:"elastic"`
 	// Mongo MongoDB存储配置
 	Mongo map[string]MongoConfig `json:"mongo" yaml:"mongo"`
+	// Syslog syslog存储配置
+	Syslog map[string]SyslogConfig `json:"syslog" yaml:"syslog"`
 }
 
 // RedisConfig redis配置
@@ -241,6 +243,34 @@ type MongoConfig struct {
 	// Tag 标签
 	// 默认值为{{.Year}}{{.Month}}{{.Day}}
 	CollectionTmpl string `json:"collection" yaml:"collection"`
+}
+
+// SyslogConfig 提供Syslog存储
+type SyslogConfig struct {
+	// Tmpl 日志项模板
+	// 模板字段说明：
+	// ID 唯一标识
+	// Time 日志发生时间
+	// Level 级别
+	// Tag 标签
+	// Message 日志明细
+	// FileName 文件名
+	// ShortName 短文件名
+	// FileFuncName 函数名
+	// FileLine 文件行
+	Tmpl string `json:"tmpl" yaml:"tmpl"`
+	// TimeTmpl 时间模板
+	// 模板字段说明：
+	// Year 年份
+	// Month 月份
+	// Day 天数
+	// Hour 小时
+	// Minute 分钟
+	// Second 秒
+	// MilliSecond 毫秒
+	TimeTmpl string `json:"time" yaml:"time"`
+	// Tag 标签配置
+	Tag string `json:"tag" yaml:"tag"`
 }
 
 // 加载默认配置

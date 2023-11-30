@@ -58,6 +58,11 @@ func NewLogManage(config *log.LogConfig, cfgFile *log.ConfigFile) log.LogManage 
 			manageStore[k] = store.NewMongoStore(v)
 		}
 	}
+	if syslogStore := config.Store.Syslog; syslogStore != nil {
+		for k, v := range syslogStore {
+			manageStore[k] = store.NewSyslogStore(v)
+		}
+	}
 	manage.Store = manageStore
 	manage.logDay = getLogDayTime()
 	manage.pathLen = len(build.Default.GOPATH + "/src/")
